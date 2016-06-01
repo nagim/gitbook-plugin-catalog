@@ -16,7 +16,7 @@ var insertAnchors = function(section) {
         var title = header.html().trim();
         var id = encodeURIComponent(title);
         id = id ? id : header.attr('id');
-        id = id.replace(/\%20/g, '_').replace(/^\_/, '')
+        id = id.replace(/\%20/g, '_').replace(/^\_/, '');
 
         //开始生成快速导航
         var curLevel = elem.tagName.replace(/h/i, '');
