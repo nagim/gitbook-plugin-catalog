@@ -15,7 +15,7 @@ var insertAnchors = function(section) {
         var header = $(elem);
         var title = header.html().trim();
         var id = encodeURIComponent(title);
-        id = header.attr('id');
+        id = id ? id : header.attr('id');
 
 
         //开始生成快速导航
