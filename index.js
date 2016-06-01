@@ -13,11 +13,11 @@ var insertAnchors = function(section) {
         map = {};
     $(':header').each(function(i, elem) {
         var header = $(elem);
-        if (elem.tagName == "h1" | "h2" | "h3") {
         var title = header.html().trim();
         var id = encodeURIComponent(title);
         id = id ? id : header.attr('id');
-        id = id.replace(/\%20/g, '_').replace(/^\_/, ''); }
+        id = id.replace(/\%20/g, '_').replace(/^\_/, '');
+
 
         //开始生成快速导航
         var curLevel = elem.tagName.replace(/h/i, '');
@@ -47,8 +47,8 @@ var insertAnchors = function(section) {
     var html = [];
     var navhtml = getListHtml(map.main, html);
     navhtml = '<div id="theo-nav"><div class="theo-content" id="theo-content">' + navhtml.join('\n') + '</div>' +
-        '<a title="Sections" href="####" id="theo-nav-btn" class="fa fa-list-ul" > </a>' +
-        '<a title="Back to top" href="####" id="theo-top-btn" class="fa fa-arrow-up"> </a>' +
+        '<a title="展开/关闭本页目录" href="####" id="theo-nav-btn" class="fa fa-list-ul" > </a>' +
+        '<a title="返回顶部" href="####" id="theo-top-btn" class="fa fa-arrow-up"> </a>' +
         '</div>';
 
     section.content = navhtml + $.html();
