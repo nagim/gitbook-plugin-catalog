@@ -14,7 +14,10 @@ var insertAnchors = function(section) {
     $(':header').each(function(i, elem) {
         var header = $(elem);
         var title = header.html().trim();
-        id = header.attr('id');
+        var id = encodeURIComponent(title);
+        id = id ? id : header.attr('id');
+        id = id.replace(/\%/g, '_').replace(/^\_/, '') + i;
+
 
         //开始生成快速导航
         var curLevel = elem.tagName.replace(/h/i, '');
