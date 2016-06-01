@@ -15,7 +15,7 @@ var insertAnchors = function(section) {
         var header = $(elem);
         var title = header.text();
         var id = header.attr('id');
-//        id = id.replace(/\%20/g, '_').replace(/^\_/, '');
+        id = id.replace(/\%20/g, '_').replace(/^\_/, '');
 
 
         //开始生成快速导航
