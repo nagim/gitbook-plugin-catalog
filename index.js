@@ -13,6 +13,7 @@ var insertAnchors = function(section) {
         map = {};
     $(':header').each(function(i, elem) {
         var header = $(elem);
+        var title = header.text();
         var id = encodeURIComponent(title);
         id = id ? id : header.attr('id');
         id = id.replace(/\%20/g, '_').replace(/^\_/, '');
