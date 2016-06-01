@@ -1,6 +1,6 @@
-gitbook-plugin-catalog
+gitbook-plugin-catalog2
 ======================
 
-gitbook plugin catalog
+gitbook plugin catalog2
 
-Thanks to https://github.com/rlmv/gitbook-plugin-anchors
+Based on https://github.com/ksky521/gitbook-plugin-catalog
