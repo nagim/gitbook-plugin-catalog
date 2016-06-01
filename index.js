@@ -13,7 +13,7 @@ var insertAnchors = function(section) {
         map = {};
     $(':header').each(function(i, elem) {
         var header = $(elem);
-        if (elem.tagName == "h1" | "h2" | "h3" | "h4") {
+        if (elem.tagName == "h1" | "h2" | "h3") {
         var title = header.html().trim();
         var id = encodeURIComponent(title);
         id = id ? id : header.attr('id');
