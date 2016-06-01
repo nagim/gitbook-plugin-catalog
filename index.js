@@ -22,7 +22,7 @@ var insertAnchors = function(section) {
         //开始生成快速导航
         var curLevel = elem.tagName.replace(/h/i, '');
         curLevel |= 0;
-        curLevel = 10 - curLevel;
+        curLevel = 2 - curLevel;
         ids[id] = {
             level: curLevel,
             title: title
@@ -58,7 +58,7 @@ var insertAnchors = function(section) {
         html.push('<ul>');
         items.forEach(function(v) {
             var list = ids[v];
-            html.push('<li data-level="' + (10 - list.level) + '">');
+            html.push('<li data-level="' + (2 - list.level) + '">');
             html.push('<a href="#' + list.id + '" data-id="' + list.id + '">' + list.title + '</a>');
             if (map[list.id] && map[list.id].length > 0) {
                 html = getListHtml(map[list.id], html);
