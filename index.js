@@ -14,7 +14,7 @@ var insertAnchors = function(section) {
     $(':header').each(function(i, elem) {
         var header = $(elem);
         var title = header.html().trim();
-        id = id ? id : header.attr('id');
+        var id = id ? id : header.attr('id');
         id = id.replace(/\%20/g, '_').replace(/^\_/, '');
 
 
