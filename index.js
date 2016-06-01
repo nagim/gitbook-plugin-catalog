@@ -33,6 +33,7 @@ var insertAnchors = function(section) {
         map[p.id].push(id);
         parentId = p.id;
         header.attr('id', id);
+        header.prepend('<a name="' + id + '" class="plugin-anchor" ' + 'href="#' + id + '"></a>');
         var obj = {
             id: id,
             pid: parentId,
