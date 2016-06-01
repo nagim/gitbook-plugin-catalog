@@ -15,8 +15,7 @@ var insertAnchors = function(section) {
         var header = $(elem);
         var title = header.html().trim();
         var id = encodeURIComponent(title);
-        id = id ? id : header.attr('id');
-        id = id.replace(/\%/g, '_').replace(/^\_/, '') + i;
+        id = header.attr('id');
 
 
         //开始生成快速导航
@@ -34,6 +33,7 @@ var insertAnchors = function(section) {
         map[p.id].push(id);
         parentId = p.id;
         header.attr('id', id);
+        header.prepend('<a name="' + id + '" class="plugin-anchor" ' + 'href="#' + id + '">' + '<span class="fa fa-link"></span>' + '</a>');
         var obj = {
             id: id,
             pid: parentId,
